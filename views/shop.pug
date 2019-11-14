@@ -18,6 +18,7 @@ html(lang="en")
         
         
         main 
+        if prods.length > 0
             .grid 
                 each product in prods 
                     article.card.product-item
@@ -33,3 +34,5 @@ html(lang="en")
 
                     divv.card__actions
                         button.btn Add to Cart
+        else 
+            h1 No Products
