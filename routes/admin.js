@@ -17,8 +17,9 @@ router.get('/add-product', (req, res, next) => {
     path: '/admin/add-product', 
     pageTitle: "Add Product",
     //active class is added
-    activeShop: true,
-    productCSS: true
+    formCSS: true,
+    productsCSS: true,
+    activeAddProduct: true
   });
 });
 
