@@ -12,7 +12,14 @@ const products = []
 
 // /admin/add-product => GET
 router.get('/add-product', (req, res, next) => {
-  res.render('add-product', {title: "Add-product", path: '/admin/add-product', pageTitle: "Add Product"});
+  res.render('add-product', {
+    title: "Add-product", 
+    path: '/admin/add-product', 
+    pageTitle: "Add Product",
+    //active class is added
+    activeShop: true,
+    productCSS: true
+  });
 });
 
 // /admin/add-product => POST
