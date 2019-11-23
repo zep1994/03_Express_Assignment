@@ -14,5 +14,7 @@ router.get('/add-product', getProduct.getAddProduct);//store the function, until
 // /admin/add-product => POST
 router.post('/add-product', postProduct.postAddProduct);
 
-exports.routes = router;
-exports.products = products;
+module.exports = router 
+//We no longer need after moving to the controller
+// exports.routes = router;
+// exports.products = products;

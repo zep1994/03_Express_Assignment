@@ -21,21 +21,10 @@ const path = require('path');
 
 const express = require('express');
 
-const rootDir = require('../util/path');
-const adminData = require('./admin');
+const produtsController = require('../controllers/product')
 
 const router = express.Router();
 
-router.get('/', (req, res, next) => {
-  const products = adminData.products; //this will access the modules in the amdnin data with name of products
-  res.render('shop', {
-    prods: products, 
-    pageTitle: 'Shop', 
-    path: '/', 
-    hasProducts: products.length > 0,
-    activeShop: true,
-    ProductCSS: true
-  });
-});
+router.get('/', produtsController.getProducts);
 
 module.exports = router;

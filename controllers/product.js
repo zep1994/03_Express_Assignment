@@ -24,3 +24,16 @@ exports.getAddProduct = (req, res, next) => {
     console.log(req.body.title)
     res.redirect('/');
   }
+
+  exports.getProducts = (req, res, next) => {
+    //This does not need to extracted becaue we moved our products array into the same file
+    //const products = adminData.products; //this will access the modules in the amdnin data with name of products
+    res.render('shop', {
+      prods: products, 
+      pageTitle: 'Shop', 
+      path: '/', 
+      hasProducts: products.length > 0,
+      activeShop: true,
+      ProductCSS: true
+    });
+  }
