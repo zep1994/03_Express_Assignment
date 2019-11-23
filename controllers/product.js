@@ -1,7 +1,7 @@
 //temp place to store data
 const products = []
 
-
+//Creates products on the fly - time to build a model
 //this still take the request (not using) , response object 
 exports.getAddProduct = (req, res, next) => {
     res.render(
