@@ -2,26 +2,14 @@ const path = require('path');
 
 const express = require('express');
 
-const rootDir = require('../util/path');
-
 const router = express.Router();
 
-
+const getProduct = require('../controllers/product')
 //obv this will be moved to the database
 const products = []
 
 // /admin/add-product => GET
-router.get('/add-product', (req, res, next) => {
-  res.render('add-product', {
-    title: "Add-product", 
-    path: '/admin/add-product', 
-    pageTitle: "Add Product",
-    //active class is added
-    formCSS: true,
-    productsCSS: true,
-    activeAddProduct: true
-  });
-});
+router.get('/add-product', getProduct.getAddProduct);//store the function, until it is time to execute it
 
 // /admin/add-product => POST
 router.post('/add-product', (req, res, next) => {

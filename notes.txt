@@ -1,0 +1,5 @@
+MVC
+Model = Represent Data / work with data
+Views = what user sees, decoupled from application code
+Routes = Controller = connectin your models to your views, contains the in between logic, talks to which model to talk to and which view to render
+(split across middleware functions)
