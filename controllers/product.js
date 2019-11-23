@@ -1,3 +1,7 @@
+//temp place to store data
+const products = []
+
+
 //this still take the request (not using) , response object 
 exports.getAddProduct = (req, res, next) => {
     res.render(
@@ -13,4 +17,10 @@ exports.getAddProduct = (req, res, next) => {
       productsCSS: true,
       activeAddProduct: true
     });
+  }
+
+  exports.postAddProduct = (req, res, next) => {
+    products.push({ title: req.body.title})
+    console.log(req.body.title)
+    res.redirect('/');
   }
