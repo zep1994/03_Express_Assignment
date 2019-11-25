@@ -11,6 +11,9 @@ const postProduct = require('../controllers/product')
 // /admin/add-product => GET
 router.get('/add-product', getProduct.getAddProduct);//store the function, until it is time to execute it
 
+// /admin/products => GET
+router.get('/products')
+
 // /admin/add-product => POST
 router.post('/add-product', postProduct.postAddProduct);
 
