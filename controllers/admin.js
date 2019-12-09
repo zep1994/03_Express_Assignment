@@ -17,3 +17,12 @@ exports.getAddProduct = (req, res, next) => {
     res.redirect('/');
   };
   
+  exports.getProducs = (req, res, next) => {
+    Product.fetchAll((products) => {
+      res.render('admin/products', {
+        prods: products,
+        pageTitle: 'Admin Products',
+        path: '/admin/products',
+      })
+    }) 
+  }
