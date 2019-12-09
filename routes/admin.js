@@ -2,18 +2,17 @@ const express = require('express');
 
 const router = express.Router();
 
-const getProduct = require('../controllers/product')
-const postProduct = require('../controllers/product')
+const adminController = require('../controllers/admin')
 //obv this will be moved to the controller const productd = []
 
 // /admin/add-product => GET
-router.get('/add-product', getProduct.getAddProduct);//store the function, until it is time to execute it
+router.get('/add-product', adminController.getAddProduct);//store the function, until it is time to execute it
 
 // /admin/products => GET
 router.get('/products')
 
 // /admin/add-product => POST
-router.post('/add-product', postProduct.postAddProduct);
+router.post('/add-product', adminController.postAddProduct);
 
 module.exports = router 
 //We no longer need after moving to the controller
