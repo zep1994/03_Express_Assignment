@@ -9,7 +9,7 @@ const adminController = require('../controllers/admin')
 router.get('/add-product', adminController.getAddProduct);//store the function, until it is time to execute it
 
 // /admin/products => GET
-router.get('/products')
+router.get('/products', adminController.getProducs)
 
 // /admin/add-product => POST
 router.post('/add-product', adminController.postAddProduct);
